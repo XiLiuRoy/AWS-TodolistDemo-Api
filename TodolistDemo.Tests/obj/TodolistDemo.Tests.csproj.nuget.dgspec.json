@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Repos\\TodolistDemo\\TodolistDemo.Tests\\TodolistDemo.Tests.csproj": {}
+    "C:\\Users\\roy.liu\\source\\repos\\AWS-TodolistDemo-Api\\TodolistDemo.Tests\\TodolistDemo.Tests.csproj": {}
   },
   "projects": {
-    "D:\\Repos\\TodolistDemo\\TodolistDemo.Tests\\TodolistDemo.Tests.csproj": {
+    "C:\\Users\\roy.liu\\source\\repos\\AWS-TodolistDemo-Api\\TodolistDemo.Tests\\TodolistDemo.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Repos\\TodolistDemo\\TodolistDemo.Tests\\TodolistDemo.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\roy.liu\\source\\repos\\AWS-TodolistDemo-Api\\TodolistDemo.Tests\\TodolistDemo.Tests.csproj",
         "projectName": "TodolistDemo.Tests",
-        "projectPath": "D:\\Repos\\TodolistDemo\\TodolistDemo.Tests\\TodolistDemo.Tests.csproj",
-        "packagesPath": "C:\\Users\\Xi\\.nuget\\packages\\",
-        "outputPath": "D:\\Repos\\TodolistDemo\\TodolistDemo.Tests\\obj\\",
+        "projectPath": "C:\\Users\\roy.liu\\source\\repos\\AWS-TodolistDemo-Api\\TodolistDemo.Tests\\TodolistDemo.Tests.csproj",
+        "packagesPath": "C:\\Users\\roy.liu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\roy.liu\\source\\repos\\AWS-TodolistDemo-Api\\TodolistDemo.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Xi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\roy.liu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -30,8 +30,8 @@
         "frameworks": {
           "netcoreapp2.1": {
             "projectReferences": {
-              "D:\\Repos\\TodolistDemo\\TodolistDemo\\TodolistDemo.csproj": {
-                "projectPath": "D:\\Repos\\TodolistDemo\\TodolistDemo\\TodolistDemo.csproj"
+              "C:\\Users\\roy.liu\\source\\repos\\AWS-TodolistDemo-Api\\TodolistDemo\\TodolistDemo.csproj": {
+                "projectPath": "C:\\Users\\roy.liu\\source\\repos\\AWS-TodolistDemo-Api\\TodolistDemo\\TodolistDemo.csproj"
               }
             }
           }
@@ -83,20 +83,20 @@
         }
       }
     },
-    "D:\\Repos\\TodolistDemo\\TodolistDemo\\TodolistDemo.csproj": {
+    "C:\\Users\\roy.liu\\source\\repos\\AWS-TodolistDemo-Api\\TodolistDemo\\TodolistDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Repos\\TodolistDemo\\TodolistDemo\\TodolistDemo.csproj",
+        "projectUniqueName": "C:\\Users\\roy.liu\\source\\repos\\AWS-TodolistDemo-Api\\TodolistDemo\\TodolistDemo.csproj",
         "projectName": "TodolistDemo",
-        "projectPath": "D:\\Repos\\TodolistDemo\\TodolistDemo\\TodolistDemo.csproj",
-        "packagesPath": "C:\\Users\\Xi\\.nuget\\packages\\",
-        "outputPath": "D:\\Repos\\TodolistDemo\\TodolistDemo\\obj\\",
+        "projectPath": "C:\\Users\\roy.liu\\source\\repos\\AWS-TodolistDemo-Api\\TodolistDemo\\TodolistDemo.csproj",
+        "packagesPath": "C:\\Users\\roy.liu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\roy.liu\\source\\repos\\AWS-TodolistDemo-Api\\TodolistDemo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Xi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\roy.liu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -120,6 +120,14 @@
       "frameworks": {
         "netcoreapp2.1": {
           "dependencies": {
+            "AWSSDK": {
+              "target": "Package",
+              "version": "[2.3.55.2, )"
+            },
+            "AWSSDK.Core": {
+              "target": "Package",
+              "version": "[3.3.100.5, )"
+            },
             "Amazon.Lambda.APIGatewayEvents": {
               "target": "Package",
               "version": "[1.2.0, )"

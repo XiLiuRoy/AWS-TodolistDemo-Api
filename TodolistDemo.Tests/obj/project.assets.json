@@ -51,6 +51,24 @@
           "lib/netstandard2.0/Amazon.Lambda.TestUtilities.dll": {}
         }
       },
+      "AWSSDK/2.3.55.2": {
+        "type": "package",
+        "compile": {
+          "lib/net45/AWSSDK.dll": {}
+        },
+        "runtime": {
+          "lib/net45/AWSSDK.dll": {}
+        }
+      },
+      "AWSSDK.Core/3.3.100.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/AWSSDK.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/AWSSDK.Core.dll": {}
+        }
+      },
       "Microsoft.CodeCoverage/1.0.3": {
         "type": "package",
         "compile": {
@@ -1731,6 +1749,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
+          "AWSSDK": "2.3.55.2",
+          "AWSSDK.Core": "3.3.100.5",
           "Amazon.Lambda.APIGatewayEvents": "1.2.0",
           "Amazon.Lambda.Core": "1.1.0",
           "Amazon.Lambda.Serialization.Json": "1.4.0"
@@ -1801,6 +1821,77 @@
         "lib/netstandard1.3/Amazon.Lambda.TestUtilities.xml",
         "lib/netstandard2.0/Amazon.Lambda.TestUtilities.dll",
         "lib/netstandard2.0/Amazon.Lambda.TestUtilities.xml"
+      ]
+    },
+    "AWSSDK/2.3.55.2": {
+      "sha512": "zy/6psTOx9c8LaZqL1tUtiGKMpd35b16TNRctz/N6Qc6hqFeOjyZ5WVhn89szJkkZtotcMFyfq58Y2RfyRxxUg==",
+      "type": "package",
+      "path": "awssdk/2.3.55.2",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "awssdk.2.3.55.2.nupkg.sha512",
+        "awssdk.nuspec",
+        "lib/net35/AWSSDK.dll",
+        "lib/net35/AWSSDK.pdb",
+        "lib/net45/AWSSDK.dll",
+        "lib/net45/AWSSDK.pdb",
+        "lib/portable-wpa+netcore45/AWSSDK.dll",
+        "lib/windows8/AWSSDK.dll",
+        "lib/windowsphone8/AWSSDK.dll",
+        "tools/account-management.ps1",
+        "tools/net35/install.ps1",
+        "tools/net45/install.ps1"
+      ]
+    },
+    "AWSSDK.Core/3.3.100.5": {
+      "sha512": "ruraTHbjgzH2pShWOk/lcE/YLO6KgkKd0p0ZPYFSswzvaPyNfTed4PW645TYbV55yH3sDHHZhp5fThbGzWnwUw==",
+      "type": "package",
+      "path": "awssdk.core/3.3.100.5",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "awssdk.core.3.3.100.5.nupkg.sha512",
+        "awssdk.core.nuspec",
+        "lib/MonoAndroid10/AWSSDK.Core.XML",
+        "lib/MonoAndroid10/AWSSDK.Core.dll",
+        "lib/MonoAndroid10/AWSSDK.Core.pdb",
+        "lib/MonoTouch10/AWSSDK.Core.XML",
+        "lib/MonoTouch10/AWSSDK.Core.dll",
+        "lib/Xamarin.Mac20/AWSSDK.Core.XML",
+        "lib/Xamarin.Mac20/AWSSDK.Core.dll",
+        "lib/Xamarin.iOS10/AWSSDK.Core.XML",
+        "lib/Xamarin.iOS10/AWSSDK.Core.dll",
+        "lib/net35/AWSSDK.Core.dll",
+        "lib/net35/AWSSDK.Core.pdb",
+        "lib/net35/AWSSDK.Core.xml",
+        "lib/net45/AWSSDK.Core.dll",
+        "lib/net45/AWSSDK.Core.pdb",
+        "lib/net45/AWSSDK.Core.xml",
+        "lib/netstandard1.3/AWSSDK.Core.dll",
+        "lib/netstandard1.3/AWSSDK.Core.pdb",
+        "lib/netstandard1.3/AWSSDK.Core.xml",
+        "lib/netstandard2.0/AWSSDK.Core.dll",
+        "lib/netstandard2.0/AWSSDK.Core.pdb",
+        "lib/netstandard2.0/AWSSDK.Core.xml",
+        "lib/portable-net45+win8+wpa81+wp8/AWSSDK.Core.XML",
+        "lib/portable-net45+win8+wpa81+wp8/AWSSDK.Core.dll",
+        "lib/portable-net45+win8+wpa81+wp8/AWSSDK.Core.pdb",
+        "lib/uap/AWSSDK.Core.XML",
+        "lib/uap/AWSSDK.Core.dll",
+        "lib/uap/AWSSDK.Core.pdb",
+        "lib/win8/AWSSDK.Core.XML",
+        "lib/win8/AWSSDK.Core.dll",
+        "lib/win8/AWSSDK.Core.pdb",
+        "lib/wp8/AWSSDK.Core.XML",
+        "lib/wp8/AWSSDK.Core.dll",
+        "lib/wp8/AWSSDK.Core.pdb",
+        "lib/wpa81/AWSSDK.Core.XML",
+        "lib/wpa81/AWSSDK.Core.dll",
+        "lib/wpa81/AWSSDK.Core.pdb",
+        "tools/account-management.ps1"
       ]
     },
     "Microsoft.CodeCoverage/1.0.3": {
@@ -2678,7 +2769,6 @@
       "sha512": "U82mHQSKaIk+lpSVCbWYKNavmNH1i5xrExDEquU1i6I5pV6UMOqRnJRSlKO3cMPfcpp0RgDY+8jUXHdQ4IfXvw==",
       "type": "package",
       "path": "newtonsoft.json/9.0.1",
-      "hasTools": true,
       "files": [
         ".nupkg.metadata",
         "lib/net20/Newtonsoft.Json.dll",
@@ -5956,23 +6046,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Xi\\.nuget\\packages\\": {},
+    "C:\\Users\\roy.liu\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Repos\\TodolistDemo\\TodolistDemo.Tests\\TodolistDemo.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\roy.liu\\source\\repos\\AWS-TodolistDemo-Api\\TodolistDemo.Tests\\TodolistDemo.Tests.csproj",
       "projectName": "TodolistDemo.Tests",
-      "projectPath": "D:\\Repos\\TodolistDemo\\TodolistDemo.Tests\\TodolistDemo.Tests.csproj",
-      "packagesPath": "C:\\Users\\Xi\\.nuget\\packages\\",
-      "outputPath": "D:\\Repos\\TodolistDemo\\TodolistDemo.Tests\\obj\\",
+      "projectPath": "C:\\Users\\roy.liu\\source\\repos\\AWS-TodolistDemo-Api\\TodolistDemo.Tests\\TodolistDemo.Tests.csproj",
+      "packagesPath": "C:\\Users\\roy.liu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\roy.liu\\source\\repos\\AWS-TodolistDemo-Api\\TodolistDemo.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Xi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\roy.liu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5985,8 +6075,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "D:\\Repos\\TodolistDemo\\TodolistDemo\\TodolistDemo.csproj": {
-              "projectPath": "D:\\Repos\\TodolistDemo\\TodolistDemo\\TodolistDemo.csproj"
+            "C:\\Users\\roy.liu\\source\\repos\\AWS-TodolistDemo-Api\\TodolistDemo\\TodolistDemo.csproj": {
+              "projectPath": "C:\\Users\\roy.liu\\source\\repos\\AWS-TodolistDemo-Api\\TodolistDemo\\TodolistDemo.csproj"
             }
           }
         }
@@ -6037,5 +6127,17 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'AWSSDK 2.3.55.2' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.1'. This package may not be fully compatible with your project.",
+      "libraryId": "AWSSDK",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.1"
+      ]
+    }
+  ]
 }

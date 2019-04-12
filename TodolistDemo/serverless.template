@@ -3,31 +3,52 @@
 	"Transform" : "AWS::Serverless-2016-10-31",
 	"Description" : "An Todo list demo for AWS Serverless Application.",
 
-	"Resources" : {
+  "Resources": {
 
-		"Get" : {
-		"Type" : "AWS::Serverless::Function",
-			"Properties": {
-				"Handler": "TodolistDemo::TodolistDemo.LambdaFunctions.TodoListFunction::Get",
-				"Runtime": "dotnetcore2.1",
-				"CodeUri": "",
-				"MemorySize": 256,
-				"Timeout": 30,
-				"Role": null,
-				"Policies": [ "AWSLambdaBasicExecutionRole" ],
-				"Events": {
-					"PutResource": {
-						"Type": "Api",
-						"Properties": {
-							"Path": "/",
-							"Method": "GET"
-						}
-					}
-				}
-			}
-		}
+    "GetTodoList": {
+      "Type": "AWS::Serverless::Function",
+      "Properties": {
+        "Handler": "TodolistDemo::TodolistDemo.LambdaFunctions.TodoListFunction::Get",
+        "Runtime": "dotnetcore2.1",
+        "CodeUri": "",
+        "MemorySize": 256,
+        "Timeout": 30,
+        "Role": null,
+        "Policies": [ "AWSLambdaBasicExecutionRole" ],
+        "Events": {
+          "PutResource": {
+            "Type": "Api",
+            "Properties": {
+              "Path": "/",
+              "Method": "GET"
+            }
+          }
+        }
+      }
+    },
+    "PutTodoItem": {
+      "Type": "AWS::Serverless::Function",
+      "Properties": {
+        "Handler": "TodolistDemo::TodolistDemo.LambdaFunctions.TodoListFunction::Put",
+        "Runtime": "dotnetcore2.1",
+        "CodeUri": "",
+        "MemorySize": 256,
+        "Timeout": 30,
+        "Role": null,
+        "Policies": [ "AWSLambdaFullAccess" ],
+        "Events": {
+          "PutResource": {
+            "Type": "Api",
+            "Properties": {
+              "Path": "/TodoItem",
+              "Method": "put"
+            }
+          }
+        }
+      }
+    }
 
-	},
+  },
 
 	"Outputs" : {
 		"ApiURL" : {
