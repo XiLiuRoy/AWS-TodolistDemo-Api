@@ -18,7 +18,7 @@ namespace TodolistDemo.LambdaFunctions
         private static string Table => $"TodoList";
         public TodoListFunction()
         {
-            AWSConfigsDynamoDB.Context.TypeMappings[typeof(TodoListFunction)] =new Amazon.Util.TypeMapping(typeof(TodoListFunction), Table);
+            AWSConfigsDynamoDB.Context.TypeMappings[typeof(TodoItem)] =new Amazon.Util.TypeMapping(typeof(TodoItem), Table);
             var config = new DynamoDBContextConfig { Conversion = DynamoDBEntryConversion.V2};
             _dbContext = new DynamoDBContext(new AmazonDynamoDBClient(), config);
         }
@@ -54,7 +54,7 @@ namespace TodolistDemo.LambdaFunctions
             var todoItem = new TodoItem(vm.Name,vm.Description, vm.DueDate);
 
             context.Logger.LogLine($"Saving todo item with id {todoItem.Id}");
-            await _dbContext.SaveAsync<TodoItem>(todoItem);
+            await _dbContext.SaveAsync(todoItem);
 
             var response = new APIGatewayProxyResponse
             {
