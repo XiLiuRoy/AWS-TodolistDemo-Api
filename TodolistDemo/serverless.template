@@ -74,6 +74,27 @@
         }
       }
     },
+	"DeleteTodoItem": {
+      "Type": "AWS::Serverless::Function",
+      "Properties": {
+        "Handler": "TodolistDemo::TodolistDemo.LambdaFunctions.TodoListFunction::Delete",
+        "Runtime": "dotnetcore2.1",
+        "CodeUri": "",
+        "MemorySize": 256,
+        "Timeout": 30,
+        "Role": null,
+        "Policies": [ "AWSLambdaFullAccess" ],
+        "Events": {
+          "PutResource": {
+            "Type": "Api",
+            "Properties": {
+              "Path": "/TodoItem/{Id}",
+              "Method": "delete"
+            }
+          }
+        }
+      }
+    },
 	    "TodoListTable" : {
         "Type" : "AWS::DynamoDB::Table",
         "Condition" : "CreateTodoListTable",
