@@ -9,8 +9,8 @@ namespace TodolistDemo.Domain
             Id = Guid.NewGuid().ToString();
             Name = string.Empty;
             IsDone = false;
-            CreatedDatetime = DateTime.UtcNow;
-            DueDate = DateTime.UtcNow.AddDays(1);
+            CreatedDatetimeUtc = DateTime.UtcNow;
+            DueDateUtc = DateTime.UtcNow.AddDays(1);
         }
 
         public TodoItem(string name, string description, DateTime dueDateLocal):this()
@@ -32,15 +32,15 @@ namespace TodolistDemo.Domain
 
             Name = name;
             Description = description;
-            DueDate = dueDateLocal.ToUniversalTime();
+            DueDateUtc = TimeZoneInfo.ConvertTimeToUtc(dueDateLocal, TimeZoneInfo.Local);
         }
         
         public string Id { private set; get; }
         public string Name { private set; get; }
         public string Description { private set; get; }
         public bool IsDone {private set; get;}
-        public DateTime CreatedDatetime { private set; get; }
-        public DateTime DueDate { private set; get; }
+        public DateTime CreatedDatetimeUtc { private set; get; }
+        public DateTime DueDateUtc { private set; get; }
 
         public TodoItem SetItemFinished()
         {

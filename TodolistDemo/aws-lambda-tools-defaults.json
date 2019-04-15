@@ -12,7 +12,7 @@
     "framework"     : "netcoreapp2.1",
     "s3-prefix"     : "TodolistDemo/",
     "template"      : "serverless.template",
-    "template-parameters" : "\"ShouldCreateTable\"=\"true\";\"TodoListTableName\"=\"Todolist\";\"ReadCapacity\"=\"3\";\"WriteCapacity\"=\"3\"",
+    "template-parameters" : "\"ShouldCreateTable\"=\"true\";\"TodoListTableName\"=\"TodoList\";\"ReadCapacity\"=\"3\";\"WriteCapacity\"=\"3\"",
     "s3-bucket"           : "cf-templates-mq1gokdazwsp-ap-southeast-2",
     "stack-name"          : "todolistdemoapi",
     "AWSRegion"           : "ap-southeast-2"
