@@ -25,14 +25,15 @@ namespace TodolistDemo.Domain
                 throw new ArgumentException("Item description can not be empty.", nameof(description));
             }
 
-            if (dueDateLocal < DateTime.Now)
+            var dueDateUtc = TimeZoneInfo.ConvertTimeToUtc(dueDateLocal, TimeZoneInfo.Local);
+            if (dueDateUtc < DateTime.UtcNow.Date)
             {
                 throw new ArgumentException("Due data cannot be in the past.", nameof(dueDateLocal));
             }
 
             Name = name;
             Description = description;
-            DueDateUtc = TimeZoneInfo.ConvertTimeToUtc(dueDateLocal, TimeZoneInfo.Local);
+            DueDateUtc = dueDateUtc;
         }
         
         public string Id { private set; get; }
