@@ -120,13 +120,13 @@
       "frameworks": {
         "netcoreapp2.1": {
           "dependencies": {
-            "AWSSDK": {
-              "target": "Package",
-              "version": "[2.3.55.2, )"
-            },
             "AWSSDK.Core": {
               "target": "Package",
               "version": "[3.3.100.5, )"
+            },
+            "AWSSDK.DynamoDBv2": {
+              "target": "Package",
+              "version": "[3.3.0.3, )"
             },
             "Amazon.Lambda.APIGatewayEvents": {
               "target": "Package",
@@ -145,6 +145,10 @@
               "target": "Package",
               "version": "[2.1.0, )",
               "autoReferenced": true
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[4.5.0, )"
             }
           },
           "imports": [

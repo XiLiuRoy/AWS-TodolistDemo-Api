@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-
 using Amazon.Lambda.Core;
 using Amazon.Lambda.APIGatewayEvents;
 using System.Net;
@@ -9,15 +8,18 @@ using TodolistDemo.ViewModel;
 using Amazon.DynamoDBv2.DataModel;
 using Amazon.DynamoDBv2;
 using System.Threading.Tasks;
+using Amazon;
 
 namespace TodolistDemo.LambdaFunctions
 {
     public class TodoListFunction
     {
-        private IDynamoDBContext _dbContext;
+        private readonly IDynamoDBContext _dbContext;
+        private static string Table => $"TodoList";
         public TodoListFunction()
         {
-            var config = new DynamoDBContextConfig { Conversion = DynamoDBEntryConversion.V2 };
+            AWSConfigsDynamoDB.Context.TypeMappings[typeof(TodoListFunction)] =new Amazon.Util.TypeMapping(typeof(TodoListFunction), Table);
+            var config = new DynamoDBContextConfig { Conversion = DynamoDBEntryConversion.V2};
             _dbContext = new DynamoDBContext(new AmazonDynamoDBClient(), config);
         }
 

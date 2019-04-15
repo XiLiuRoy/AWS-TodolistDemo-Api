@@ -9,6 +9,7 @@ using Amazon.Lambda.TestUtilities;
 using Amazon.Lambda.APIGatewayEvents;
 
 using TodolistDemo;
+using TodolistDemo.LambdaFunctions;
 
 namespace TodolistDemo.Tests
 {
@@ -25,7 +26,7 @@ namespace TodolistDemo.Tests
             APIGatewayProxyRequest request;
             APIGatewayProxyResponse response;
 
-            Functions functions = new Functions();
+            var functions = new TodoListFunction();
 
 
             request = new APIGatewayProxyRequest();

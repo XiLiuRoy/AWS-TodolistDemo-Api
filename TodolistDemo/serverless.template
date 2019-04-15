@@ -2,7 +2,34 @@
 	"AWSTemplateFormatVersion" : "2010-09-09",
 	"Transform" : "AWS::Serverless-2016-10-31",
 	"Description" : "An Todo list demo for AWS Serverless Application.",
-
+	"Parameters" : {
+    "ShouldCreateTable" : {
+      "Type" : "String",        
+      "AllowedValues" : ["true", "false"],
+      "Description" : "If true then the DynamoDB todo list table will be created with the CloudFormation stack."
+    },  
+    "TodoListTableName" : {
+        "Type" : "String",
+        "Description" : "Name of DynamoDB table used to store the todo list. If left blank a new table will be created.",
+        "MinLength" : "0"
+    },
+    "ReadCapacity" : {
+        "Type" : "Number",
+        "Description" : "Read capacity for the DynamoDB todo list table.",
+        "Default" : "3",
+        "MinValue" : 1
+    },
+    "WriteCapacity" : {
+        "Type" : "Number",
+        "Description" : "Write capacity for the DynamoDB todo list table.",
+        "Default" : "3",
+        "MinValue" : 1
+    }
+  },
+	"Conditions" : {
+    "CreateTodoListTable" : {"Fn::Equals" : [{"Ref" : "ShouldCreateTable"}, "true"]},
+	  "TableNameGenerated" : {"Fn::Equals" : [{"Ref" : "TodoListTableName"}, ""]}
+  },
   "Resources": {
 
     "GetTodoList": {
@@ -46,6 +73,23 @@
           }
         }
       }
+    },
+	    "TodoListTable" : {
+        "Type" : "AWS::DynamoDB::Table",
+        "Condition" : "CreateTodoListTable",
+        "Properties" : {
+            "TableName" : { "Fn::If" : ["TableNameGenerated", {"Ref" : "AWS::NoValue" }, { "Ref" : "TodoListTableName" } ] },
+            "AttributeDefinitions" : [
+              {"AttributeName" : "Id", "AttributeType" : "S"}
+            ],
+            "KeySchema"            : [
+              {"AttributeName" : "Id", "KeyType" : "HASH"}
+            ],
+            "ProvisionedThroughput" : {
+                "ReadCapacityUnits" : { "Ref" : "ReadCapacity" },
+                "WriteCapacityUnits" : { "Ref" : "WriteCapacity" }
+            }
+        }
     }
 
   },
