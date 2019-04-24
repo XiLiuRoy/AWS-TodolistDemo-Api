@@ -41,9 +41,9 @@
         "MemorySize": 256,
         "Timeout": 30,
         "Role": null,
-        "Policies": [ "AWSLambdaBasicExecutionRole" ],
+        "Policies": [ "AWSLambdaFullAccess" ],
         "Events": {
-          "PutResource": {
+          "GetResource": {
             "Type": "Api",
             "Properties": {
               "Path": "/",
@@ -85,7 +85,7 @@
         "Role": null,
         "Policies": [ "AWSLambdaFullAccess" ],
         "Events": {
-          "PutResource": {
+          "DeleteResource": {
             "Type": "Api",
             "Properties": {
               "Path": "/TodoItem/{Id}",
