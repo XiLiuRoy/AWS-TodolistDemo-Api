@@ -2,6 +2,16 @@
 	"AWSTemplateFormatVersion" : "2010-09-09",
 	"Transform" : "AWS::Serverless-2016-10-31",
 	"Description" : "An Todo list demo for AWS Serverless Application.",
+	"Globals":{
+		"Api":{
+		"EndpointConfiguration":"REGIONAL",
+        "Cors" : {
+		"AllowMethods":"OPTIONS,GET,POST,DELETE",
+		"AllowHeaders":"*",
+		"AllowOrigin":"*"
+		}
+		}
+	},
 	"Parameters" : {
     "ShouldCreateTable" : {
       "Type" : "String",        
@@ -35,7 +45,7 @@
     "GetTodoList": {
       "Type": "AWS::Serverless::Function",
       "Properties": {
-        "Handler": "TodolistDemo::TodolistDemo.LambdaFunctions.TodoListFunction::Get",
+        "Handler": "TodolistDemo::TodolistDemo.LambdaFunctions.GetTodo::Get",
         "Runtime": "dotnetcore2.1",
         "CodeUri": "",
         "MemorySize": 256,
@@ -56,7 +66,7 @@
     "PutTodoItem": {
       "Type": "AWS::Serverless::Function",
       "Properties": {
-        "Handler": "TodolistDemo::TodolistDemo.LambdaFunctions.TodoListFunction::Put",
+        "Handler": "TodolistDemo::TodolistDemo.LambdaFunctions.AddTodo::Post",
         "Runtime": "dotnetcore2.1",
         "CodeUri": "",
         "MemorySize": 256,
@@ -68,7 +78,7 @@
             "Type": "Api",
             "Properties": {
               "Path": "/TodoItem",
-              "Method": "put"
+              "Method": "Post"
             }
           }
         }
@@ -77,7 +87,7 @@
 	"DeleteTodoItem": {
       "Type": "AWS::Serverless::Function",
       "Properties": {
-        "Handler": "TodolistDemo::TodolistDemo.LambdaFunctions.TodoListFunction::Delete",
+        "Handler": "TodolistDemo::TodolistDemo.LambdaFunctions.DeleteTodo::Delete",
         "Runtime": "dotnetcore2.1",
         "CodeUri": "",
         "MemorySize": 256,
