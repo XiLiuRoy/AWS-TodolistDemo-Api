@@ -19,6 +19,7 @@ namespace TodolistDemo.ViewModel
             Description = todoItem.Description;
             IsDone = todoItem.IsDone;
             DueDate = todoItem.DueDateUtc.ToLocalTime();
+            CreatedDate = todoItem.CreatedDatetimeUtc.ToLocalTime();
         }
 
         public string Id { set; get; } = string.Empty;
@@ -26,5 +27,6 @@ namespace TodolistDemo.ViewModel
         public string Description { set; get; } = string.Empty;
         public bool IsDone { set; get; } = false;
         public DateTime DueDate { set; get; } = DateTime.Now.AddDays(1);
+        public DateTime CreatedDate { set; get; } = DateTime.Now.AddDays(1);
     }
 }

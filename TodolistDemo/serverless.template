@@ -4,12 +4,7 @@
 	"Description" : "An Todo list demo for AWS Serverless Application.",
 	"Globals":{
 		"Api":{
-		"EndpointConfiguration":"REGIONAL",
-        "Cors" : {
-		"AllowMethods":"OPTIONS,GET,POST,DELETE",
-		"AllowHeaders":"*",
-		"AllowOrigin":"*"
-		}
+		"EndpointConfiguration":"REGIONAL"
 		}
 	},
 	"Parameters" : {

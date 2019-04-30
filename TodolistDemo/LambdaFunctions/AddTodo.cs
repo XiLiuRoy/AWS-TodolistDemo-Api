@@ -40,7 +40,7 @@ namespace TodolistDemo.LambdaFunctions
             var response = new APIGatewayProxyResponse
             {
                 StatusCode = (int)HttpStatusCode.OK,
-                Body = todoItem.Id,
+                Body = JsonConvert.SerializeObject(new TodoItemViewModel(todoItem)),
                 Headers = Functions.LambdaHeader
             };
             return response;

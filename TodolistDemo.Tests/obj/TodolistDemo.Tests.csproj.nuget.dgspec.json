@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\roy.liu\\source\\repos\\AWS-TodolistDemo-Api\\TodolistDemo.Tests\\TodolistDemo.Tests.csproj": {}
+    "D:\\Repos\\AWS-TodolistDemo-Api\\TodolistDemo.Tests\\TodolistDemo.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\roy.liu\\source\\repos\\AWS-TodolistDemo-Api\\TodolistDemo.Tests\\TodolistDemo.Tests.csproj": {
+    "D:\\Repos\\AWS-TodolistDemo-Api\\TodolistDemo.Tests\\TodolistDemo.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\roy.liu\\source\\repos\\AWS-TodolistDemo-Api\\TodolistDemo.Tests\\TodolistDemo.Tests.csproj",
+        "projectUniqueName": "D:\\Repos\\AWS-TodolistDemo-Api\\TodolistDemo.Tests\\TodolistDemo.Tests.csproj",
         "projectName": "TodolistDemo.Tests",
-        "projectPath": "C:\\Users\\roy.liu\\source\\repos\\AWS-TodolistDemo-Api\\TodolistDemo.Tests\\TodolistDemo.Tests.csproj",
-        "packagesPath": "C:\\Users\\roy.liu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\roy.liu\\source\\repos\\AWS-TodolistDemo-Api\\TodolistDemo.Tests\\obj\\",
+        "projectPath": "D:\\Repos\\AWS-TodolistDemo-Api\\TodolistDemo.Tests\\TodolistDemo.Tests.csproj",
+        "packagesPath": "C:\\Users\\Xi\\.nuget\\packages\\",
+        "outputPath": "D:\\Repos\\AWS-TodolistDemo-Api\\TodolistDemo.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\roy.liu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Xi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -30,8 +30,8 @@
         "frameworks": {
           "netcoreapp2.1": {
             "projectReferences": {
-              "C:\\Users\\roy.liu\\source\\repos\\AWS-TodolistDemo-Api\\TodolistDemo\\TodolistDemo.csproj": {
-                "projectPath": "C:\\Users\\roy.liu\\source\\repos\\AWS-TodolistDemo-Api\\TodolistDemo\\TodolistDemo.csproj"
+              "D:\\Repos\\AWS-TodolistDemo-Api\\TodolistDemo\\TodolistDemo.csproj": {
+                "projectPath": "D:\\Repos\\AWS-TodolistDemo-Api\\TodolistDemo\\TodolistDemo.csproj"
               }
             }
           }
@@ -83,20 +83,20 @@
         }
       }
     },
-    "C:\\Users\\roy.liu\\source\\repos\\AWS-TodolistDemo-Api\\TodolistDemo\\TodolistDemo.csproj": {
+    "D:\\Repos\\AWS-TodolistDemo-Api\\TodolistDemo\\TodolistDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\roy.liu\\source\\repos\\AWS-TodolistDemo-Api\\TodolistDemo\\TodolistDemo.csproj",
+        "projectUniqueName": "D:\\Repos\\AWS-TodolistDemo-Api\\TodolistDemo\\TodolistDemo.csproj",
         "projectName": "TodolistDemo",
-        "projectPath": "C:\\Users\\roy.liu\\source\\repos\\AWS-TodolistDemo-Api\\TodolistDemo\\TodolistDemo.csproj",
-        "packagesPath": "C:\\Users\\roy.liu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\roy.liu\\source\\repos\\AWS-TodolistDemo-Api\\TodolistDemo\\obj\\",
+        "projectPath": "D:\\Repos\\AWS-TodolistDemo-Api\\TodolistDemo\\TodolistDemo.csproj",
+        "packagesPath": "C:\\Users\\Xi\\.nuget\\packages\\",
+        "outputPath": "D:\\Repos\\AWS-TodolistDemo-Api\\TodolistDemo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\roy.liu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Xi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
